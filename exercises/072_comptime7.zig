@@ -16,6 +16,12 @@
 const print = @import("std").debug.print;
 
 pub fn main() void {
+    // const foo = [3]*const [5]u8{ "~{s}~", "<{s}>", "d{s}b" };
+    // comptime var j = 0;
+
+    // inline while (j < foo.len) : (j += 1) {
+    //     print(foo[j] ++ "\n", .{foo[j]});
+    // }
     // Here is a string containing a series of arithmetic
     // operations and single-digit decimal values. Let's call
     // each operation and digit pair an "instruction".
@@ -35,7 +41,7 @@ pub fn main() void {
     // at compile time.
     //
     // Please fix this to loop once per "instruction":
-    ??? (i < instructions.len) : (???) {
+    inline while (i < instructions.len) : (i += 3) {
 
         // This gets the digit from the "instruction". Can you
         // figure out why we subtract '0' from it?
